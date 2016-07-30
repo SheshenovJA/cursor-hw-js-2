@@ -32,9 +32,12 @@ function doGame(){
         var userNumber = prompt(mainMsg);
         turns++;
 
-        if (userNumber == randomNumber) {
+        if (userNumber == randomNumber && turns == 1) {
             confirm("Ви вгадали! Ваш виграш:" +rewards[0]+ " "+keepPlayingMsg);
             }
+            if (userNumber == randomNumber && turns == 2) {
+                confirm("Ви вгадали! Ваш виграш:" +rewards[1]+ " "+keepPlayingMsg);
+                }
 
             else  {
                 console.log("Не пощастило, спробуй ще!");
@@ -46,8 +49,6 @@ function doGame(){
         //win game TBA
 
         //lose game TBA
-
-        //if user lost 3 attepts
     if (userNumber !== randomNumber) {
             console.log(loseGameTottaly);
             if(!confirm(playAgainMsg))
